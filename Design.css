@@ -385,3 +385,13 @@ color: rgba(0, 0, 0, 0.67);
 
 }
 
+.footer{
+    position: fixed;
+    height: 25px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #00607E;
+    font-size: smaller;
+    color: white;
+}
