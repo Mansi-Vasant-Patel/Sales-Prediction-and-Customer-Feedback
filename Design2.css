@@ -227,3 +227,11 @@ text-align: center;
 color: #000000;
 
 }
+.footer{
+    height: 25px;
+    margin-top: 1000px;
+    width: 100%;
+    background-color: #00607E;
+    font-size: smaller;
+    color: white;
+}
