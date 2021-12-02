@@ -1,18 +1,27 @@
+html{
+    max-width: 1770px;
+}
 body{
     background-color:#FFFFFF;
-    
+
 }
 body {
 	margin: 0;
-	padding: 0;
 }
 
+.row{
+    padding: 0px;
+}
+
+.container-fluid{
+    padding: 0px;
+}
 #heading{
-    position: absolute;
+    position: relative;
 width: 185px;
 height: 60px;
 left: 51.79px;      
-top: 26.61px;
+top: 35.61px;
 
 font-family: Poppins;
 font-style: normal;
@@ -27,10 +36,10 @@ color:#00607E;
 }
 
 #Forecasting{
-    position: absolute;
-width: 204.96px;
+    position:relative;
+width: 154.96px;
 height: 40px;
-left: 389.86px;
+left: 149.86px;
 top: 26.61px;
 
 font-family: Poppins;
@@ -43,10 +52,10 @@ color: rgba(0, 0, 0, 0.67);
 }
 
 #Dashboard{
-    position: absolute;
-width: 204.96px;
+    position: relative;
+width: 154.96px;
 height: 40px;
-left: 604.81px;
+left: 99.81px;
 top: 26.61px;
 
 font-family: Poppins;
@@ -59,10 +68,10 @@ color: rgba(0, 0, 0, 0.67);
 }
 
 #Wordcloud{
-    position: absolute;
-width: 281.02px;
+    position: relative;
+width: 181.02px;
 height: 40px;
-left: 819.77px;
+left: 39.77px;
 top: 26.61px;
 
 font-family: Poppins;
@@ -78,10 +87,9 @@ color: rgba(0, 0, 0, 0.67);
 /* Feedback Analysis */
 
 
-position: absolute;
+position: relative;
 width: 201.91px;
 height: 40px;
-left: 1070.8px;
 top: 26.61px;
 
 font-family: Poppins;
@@ -96,9 +104,9 @@ color: rgba(0, 0, 0, 0.67);
 
 .block{
     position: absolute;
-width: 1349px;
+width: 100%;
 height: 453.39px;
-left: 0px;
+
 top: 92.47px;
 
 background: #00607E;
@@ -143,34 +151,31 @@ color: #F2F2F2;
     position: absolute;
 width: 401px;
 height: 401px;
-left: 103.76px;
-top: 110.83px;
-
+left: 1003.76px;
+top: 30.83px;
 }
 
 .Salesprediction{
-    position: absolute;
+    position: relative;
 width: 309.14px;
 height: 309.14px;
-left: 278.36px;
-top: 527.45px;
+left: 328.36px;
+top: 627.45px;
 
 background: #F2F2F2;
 box-shadow: -7px 8px 20px 6px rgba(0, 96, 126, 0.14);
-border-radius: 209.569px;
 
 }
 
 .FeedbackAnalysis{
-    position: absolute;
+    position: relative;
 width: 309.14px;
 height: 309.14px;
-left: 778.36px;
-top: 527.45px;
+left: 828.36px;
+top: 307.45px;
 
 background: #F2F2F2;
 box-shadow: -7px 8px 20px 6px rgba(0, 96, 126, 0.14);
-border-radius: 209.569px;
 
 }
 
@@ -184,12 +189,29 @@ top: 67.44px;
 background: url(sales.png);
 }
 
+#Forecasting-Sales{
+    position: relative;
+width: 299.68px;
+height: 57.14px;
+left: 8.09px;
+top: 179.46px;
+
+font-family: Poppins;
+font-style: medium;
+font-weight: medium;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+
+color: #000000;
+}
+
 .insights{
     position: absolute;
 width: 299.68px;
 height: 57.14px;
 left: 8.09px;
-top: 189.46px;
+top: 219.46px;
 
 font-family: Poppins;
 font-style: normal;
@@ -202,22 +224,41 @@ color: #000000;
 
 }
 
-.sales1{
+
+.feedbackimg{
     position: absolute;
 width: 85.01px;
 height: 85.01px;
-left: 890.42px;
-top: 590.44px;
+left: 110.42px;
+top: 67.44px;
 
 background: url(sales.png);
 }
 
-.insights1{
+#Feedback-Analysis{
+    position: relative;
+width: 299.68px;
+height: 57.14px;
+left: 18.09px;
+top: 179.46px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: medium;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+
+color: #000000;
+}
+
+
+.feedbacktext{
     position: absolute;
 width: 299.68px;
 height: 57.14px;
-left: 780.09px;
-top: 709.46px;
+left: 8.09px;
+top: 229.46px;
 
 font-family: Poppins;
 font-style: normal;
@@ -229,6 +270,7 @@ text-align: center;
 color: #000000;
 
 }
+
 
 .Heading{
     position: absolute;
@@ -341,4 +383,15 @@ line-height: 36px;
 
 color: rgba(0, 0, 0, 0.67);
 
+}
+
+.footer{
+    position: fixed;
+    height: 25px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #00607E;
+    font-size: smaller;
+    color: white;
 }
