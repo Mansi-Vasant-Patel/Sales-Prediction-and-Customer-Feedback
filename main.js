@@ -135,10 +135,10 @@ try {
     var target = $(e.target);
   
     // Listen to the selected note.
-    if(target.hasClass('listen-note')) {
-      var content = target.closest('.note').find('.content').text();
-      readOutLoud(content);
-    }
+    // if(target.hasClass('listen-note')) {
+    //   var content = target.closest('.note').find('.content').text();
+    //   readOutLoud(content);
+    // }
   
     // Delete note.
     if(target.hasClass('delete-note')) {
@@ -154,17 +154,17 @@ try {
         Speech Synthesis 
   ------------------------------*/
   
-  function readOutLoud(message) {
-      var speech = new SpeechSynthesisUtterance();
+//   function readOutLoud(message) {
+//       var speech = new SpeechSynthesisUtterance();
   
-    // Set the text and voice attributes.
-      speech.text = message;
-      speech.volume = 1;
-      speech.rate = 1;
-      speech.pitch = 1;
+//     // Set the text and voice attributes.
+//       speech.text = message;
+//       speech.volume = 1;
+//       speech.rate = 1;
+//       speech.pitch = 1;
     
-      window.speechSynthesis.speak(speech);
-  }
+//       window.speechSynthesis.speak(speech);
+//   }
   
   
   
@@ -179,7 +179,7 @@ try {
         html+= `<li class="note">
           <p class="header">
             <span class="date">${note.date}</span>
-            <a href="#" class="listen-note" title="Listen to Note">Listen to Note</a>
+
             <a href="#" class="delete-note" title="Delete">Delete</a>
           </p>
           <p class="content">${note.content}</p>
