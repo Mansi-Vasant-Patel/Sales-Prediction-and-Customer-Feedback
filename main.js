@@ -29,12 +29,12 @@ try {
   
   var noteTextarea = $('#note-textarea');
   var notesList = $('ul#notes');
-  
+  var instructions = $('#recording-instructions');
   var noteContent = '';
   
   // Get all notes from previous sessions and display them.
-  var notes = getAllNotes();
-  renderNotes(notes);
+  // var notes = getAllNotes();
+  // renderNotes(notes);
   
   
   
@@ -104,11 +104,15 @@ try {
     instructions.text('Voice recognition paused.');
   });
   
+
   // Sync the text inside the text area with the noteContent variable.
   noteTextarea.on('input', function() {
     noteContent = $(this).val();
   })
   
+
+
+
   $('#save-note-btn').on('click', function(e) {
     recognition.stop();
   
@@ -125,6 +129,9 @@ try {
       renderNotes(getAllNotes());
       noteTextarea.val('');
       instructions.text('Note saved successfully.');
+      console.log($(note.content))
+      console.log("neeche aagaya")
+      appendNote(noteContent); //calling the function append note here on saving
     }
         
   })
@@ -220,6 +227,11 @@ try {
   
   function deleteNote(dateTime) {
     localStorage.removeItem('note-' + dateTime); 
+  }
+
+  function appendNote(noteContent){
+    console.log(noteContent)
+    console.log("wtf")
   }
 
 
