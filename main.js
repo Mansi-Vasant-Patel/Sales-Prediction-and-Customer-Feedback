@@ -123,15 +123,15 @@ try {
       // Save note to localStorage.
       // The key is the dateTime with seconds, the value is the content of the note.
       saveNote(new Date().toLocaleString(), noteContent);
-  
+      //console.log(noteContent)
+      appendNote(noteContent); //calling the function append note here on saving
+
       // Reset variables and update UI.
       noteContent = '';
       renderNotes(getAllNotes());
       noteTextarea.val('');
       instructions.text('Note saved successfully.');
-      console.log($(note.content))
-      console.log("neeche aagaya")
-      appendNote(noteContent); //calling the function append note here on saving
+
     }
         
   })
