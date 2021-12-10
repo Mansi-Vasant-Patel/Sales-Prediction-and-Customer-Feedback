@@ -8,6 +8,8 @@
 //     instructions.text("Mic recording has started")
 // }
 
+//const { saveAs } = require("./FileSaver");
+
 // $("#startbutton").click(function (event) {
 //     if (content.length){
 //         content +=" "
@@ -230,8 +232,11 @@ try {
   }
 
   function appendNote(noteContent){
-    console.log(noteContent)
-    console.log("wtf")
+    var blob = new Blob([noteContent], {type:"text/plain;charset=utf-8"});
+    console.log(blob)
+    console.log("text")
+    saveAs(blob,texting.txt)
+    console.log("file bangayi")
   }
 
 
