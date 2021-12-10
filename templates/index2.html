@@ -8,17 +8,17 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Design.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Design.css') }}">
 </head>
 
 <body class= "container-fluid">
 
     <div class="navbar col-lg-12">
-        <a href="index2.html"><p id="heading">Customo</p></a>
-        <a href="#"><p id="Forecasting"> Sales Forecasting </p></a>
-        <a href="Salesdashboard.html"><p id="Dashboard"> Sales Dashboard </p></a>
-        <a href="feedbackwordcloud.html"><p id="Wordcloud"> Feedback Wordcloud </p></a>
-        <a href="feedbackanalysis.html"><p id="Analysis"> Feedback Analysis </p></a>
+        <a href="{{ url_for("home")}}"><p id="heading">Customo</p></a>
+        <a href="{{ url_for("SalesForecasting")}}"><p id="Forecasting"> Sales Forecasting </p></a>
+        <a class="link" href="{{ url_for("SalesDashboard")}}"><p id="Dashboard"> Sales Dashboard </p></a>
+        <a href="{{ url_for("feedbackWordCloud")}}"><p id="Wordcloud"> Feedback Wordcloud </p></a>
+        <a href="{{ url_for("feedbackAnalysis")}}"><p id="Analysis"> Feedback Analysis </p></a>
     </div>
     <div class="container-fluid">
         <div class="row col-lg-12">
@@ -28,16 +28,16 @@
                     <p class="content"> Your one stop solution for Customer Feedback Analysis and Sales Prediction.&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         Get valuable insights which helps you to grow your business.
                     </p>
-                    <img class="feedbackimage" src="Feedback-bro.png">
+                    <img class="feedbackimage" src="{{ url_for('static', filename='images/Feedback-bro.png') }}">
                 </div>
                 <div class= "Salesprediction">
-                    <img class="sales" src="sales.png">
+                    <img class="sales" src="{{ url_for('static', filename='images/sales.png') }}">
                     <p id="Forecasting-Sales"> Sales Forecasting </p>
                     <p class="insights">Get insights about your business sales and forecast sales </p>
                 </div>
                     
                 <div class= "FeedbackAnalysis">
-                    <img class="feedbackimg" src="sales.png">
+                    <img class="feedbackimg" src="{{ url_for('static', filename='images/sales.png') }}">
                     <p id="Feedback-Analysis">Feedback Analysis</p>
                     <p class="feedbacktext">Get insights about your business sales and forecast sales </p>
                 </div>
