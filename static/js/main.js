@@ -78,7 +78,7 @@ try {
   }
   
   recognition.onspeechend = function() {
-    instructions.text('You were quiet for a while so voice recognition turned itself off.');
+    instructions.text('voice recording paused.');
   }
   
   recognition.onerror = function(event) {
@@ -119,7 +119,7 @@ try {
     recognition.stop();
   
     if(!noteContent.length) { //when we try to save an empty note 
-      instructions.text('Could not save empty note. Please add a message to your note.');
+      instructions.text('Could not save empty note. Please add a message for feedback.');
     }
     else {
       // Save note to localStorage.
@@ -130,9 +130,9 @@ try {
 
       // Reset variables and update UI.
       noteContent = '';
-      renderNotes(getAllNotes());
+      //renderNotes(getAllNotes());
       noteTextarea.val('');
-      instructions.text('Note saved successfully.');
+      instructions.text('Feedback saved successfully.Thanks for sharing!');
 
     }
         
@@ -232,10 +232,10 @@ try {
   }
 
   function appendNote(noteContent){
-    var blob = new Blob([noteContent], {type:"text/plain;charset=utf-8"});
-    console.log(blob)
-    console.log("text")
-    saveAs(blob,texting.txt)
+    //var blob = new Blob([noteContent], {type:"text/plain;charset=utf-8"});
+    //console.log(blob)
+    console.log(noteContent)
+    //saveAs(blob,texting.txt)
     console.log("file bangayi")
   }
 

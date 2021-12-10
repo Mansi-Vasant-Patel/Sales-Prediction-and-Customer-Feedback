@@ -47,24 +47,28 @@
     </head>
     <body class="container-fluid">
         <div class="container">
-
-            <h1>Tell us about our sevice / food today..</h1><br>
+            <br><br>
+            <h1 style="text-align: center;">Tell us about our sevice / food today..</h1><br>
 
 
             <div class="app"> 
            
                 <div class="input-single">
-                    <textarea id="note-textarea" placeholder="Create a new note by typing or using voice recognition." rows="6"></textarea>
-                </div> <center> 
-                <button id="start-record-btn" title="Start Recording">START <i class="fas fa-microphone-alt"></i></button>
-                <button id="pause-record-btn" title="Pause Recording">STOP <i class="fas fa-microphone-slash"></i></button>
-                <button id="save-note-btn" title="Save Note">SAVE <i class="fas fa-save"></i></button>
-            </center> <br><br>
-                <h3>My Notes</h3>
+                  <center> <textarea id="note-textarea" placeholder="Record your feedback here by pressing the start button below." rows="6" style="width: 50%;"></textarea></center> 
+                </div> 
+                <center> 
+                <button id="start-record-btn" title="Start Recording" style="background-color: #00607E;">START <i class="fas fa-microphone-alt"></i></button>
+                <button id="pause-record-btn" title="Pause Recording"  style="background-color: #00607E;">STOP <i class="fas fa-microphone-slash"></i></button>
+                <button id="save-note-btn" title="Save Note"  style="background-color: #00607E;">SAVE <i class="fas fa-save"></i></button>
+                </center> <br><br>
+                
+                <center> <p id="recording-instructions"></p></center> 
+
+               <!-- <h3>My Notes</h3> -->
                 <ul id="notes">
-                    <li>
-                        <p class="no-notes">You don't have any notes.</p>
-                    </li>
+                    <!--<li>
+                       <p class="no-notes">You don't have any notes.</p> 
+                    </li> -->
                 </ul>
 
             </div>
