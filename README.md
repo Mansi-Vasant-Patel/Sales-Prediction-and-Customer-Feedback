@@ -33,9 +33,9 @@ https://www.figma.com/file/unz7WgJyNzP1xMFj4bm8AO/Untitled?node-id=0%3A1
 - Database (Firebase etc) for storage
 - Google speech recognition for transcribing
 
-**Hardware:**
+### Hardware:
 - Mic
 
-**Language Used:**
+### Language Used:
 - HTML & CSS
 - Python 
