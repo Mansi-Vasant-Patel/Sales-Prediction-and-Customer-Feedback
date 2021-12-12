@@ -1,7 +1,7 @@
 # Sales-Prediction-and-Customer-Feedback
 Wesite design for the application - Sales prediction & customer feedback
 
-##**Abstract**
+**##Abstract**
 
 Taking customer feedback is important to understand user requirements. Customer feedback helps improve product development, marketing, operations, and so much more. However, It’s one of the most important aspects of running a business that often gets overlooked. Many companies could find themselves lacking sales or simply not keeping the right kind of customer base because they have not taken the time to listen to their customers as much as they should. Listening to your customers and applying those insights is the best way to move a business forward.
 
