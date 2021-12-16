@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback Wordcloud</title>
+    <script src="https://kit.fontawesome.com/88cacf6a0e.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Design.css') }}">
+</head>
+
+<body class="container-fluid">
+
+    <div class="navbar col-lg-12">
+        <p id="heading1">Customo</p>
+        <p id="Forecasting1"> Sales Forecasting </p>
+        <p id="salesDashboard1"> Sales Dashboard </p>
+        <p id="Wordcloud1"> Feedback Wordcloud </p>
+        <hr class = "underline">
+        <p id="Analysis1"> Feedback Analysis </p>
+        
+    </div>
+
+    <h3>Sales Prediction Form:</h3> <br><br>
+    <form action="#" method="post">
+        <div class="row">
+            <div class="form-group col-lg-8 col-md-6"> 
+                <label for = "ProductName">Product Name</label>
+                <input type="text" class="form-control" id="prodName" aria-describedby="emailHelp" placeholder="Store Number">
+            </div>
+        </div>
+        <br><br><br>
+
+        <div class="row">
+            <div class="form-group col-lg-6 col-md-6">
+            <label for="storeNumber">Store Number</label>
+            <input type="number" class="form-control" id="strnumber" placeholder="Store Number">
+            </div>
+
+            <div class="form-group col-lg-6 col-md-6">
+            <label for="price">Price</label>
+            <input type="number" class="form-control" id="prodprice" placeholder="Price">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-lg-6 col-md-6">
+            <label for="storeNumber">Sold</label>
+            <input type="number" class="form-control" id="strnumber" aria-describedby="emailHelp" placeholder="Enter total sold items">
+            </div>
+
+            <div class="form-group col-lg-6 col-md-6">
+            <label for="ProfitOnProduct">Profit </label>
+            <input type="number" class="form-control" id="prodprofit" placeholder="Enter profit on that product">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-lg-6 col-md-6">
+            <label for="storeNumber">Unit Cost</label>
+            <input type="number" class="form-control" id="strnumber" aria-describedby="emailHelp" placeholder="Enter cost of one unit">
+            </div>
+
+            <div class="form-group col-lg-6 col-md-6">
+            <label for="exampleInputPassword1">Margin</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter the product's margin here">
+            </div>
+        </div>
+
+
+<br><br><br>
+        <center><button type="submit" class="btn btn-primary" style="background-color: #00607E;" name="salespredbtn" id="sales-btn">Submit</button></center>
+<br>
+
+      </form>
+
+
+    <footer>
+        <div class="footer"> <center>&copy; 2021 Customo Technologies. All Rights Reserved.</center></div>
+    </footer>
+
+</body>
+
+</html>
