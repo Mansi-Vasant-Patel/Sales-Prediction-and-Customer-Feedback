@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Feedback Wordcloud</title>
+    <title>Sales Forecasting</title>
     <script src="https://kit.fontawesome.com/88cacf6a0e.js" crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -13,20 +13,23 @@
 <body>
 
     <div class="navbar">
-        <p id="heading1">Customo</p>
-        <p id="Forecasting1"> Sales Forecasting </p>
-        <p id="salesDashboard1"> Sales Dashboard </p>
-        <p id="Wordcloud1"> Feedback Wordcloud </p>
-        <hr class = "underline">
-        <p id="Analysis1"> Feedback Analysis </p>
+        <a href="{{ url_for("home")}}"><p id="heading">Customo</p></a>
+        <a href="{{ url_for("SalesForecasting")}}"><p id="Forecasting"> Sales Forecasting </p></a>
+        <a class="link" href="{{ url_for("SalesDashboard")}}"><p id="Dashboard"> Sales Dashboard </p></a>
+        <a href="{{ url_for("feedbackWordCloud")}}"><p id="Wordcloud"> Feedback Wordcloud </p></a>
+        <a href="{{ url_for("feedbackAnalysis")}}"><p id="Analysis"> Feedback Analysis </p></a>
+
         
     </div>
 
     <div class="row">
     
         <div class="col-4"></div>
-        <p class="Heading">Feedback Wordcloud</p>
-        <div class="col-8"></div>
+        <p class="Heading">Sales Forecasting</p>
+        <div class="col-8">
+        <p class = "productvalue"> Sales predicted for {{product}} </p>
+        <p class = "predictedvalue">{{value}}</p>
+        </div>
 
 
     </div>

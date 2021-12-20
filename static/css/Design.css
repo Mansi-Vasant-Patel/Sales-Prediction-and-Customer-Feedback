@@ -399,3 +399,36 @@ color: rgba(0, 0, 0, 0.67);
 .SalesInput{
     margin: 10px !important;
 }
+
+.productvalue{
+    position: relative;
+    left: 25px;
+    top: 187px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 72px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+.predictedvalue{
+    position: relative;
+    left: 120px;
+    top: 190px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 216px;
+    /* identical to box height */
+
+
+    color: #000000;
+
+}

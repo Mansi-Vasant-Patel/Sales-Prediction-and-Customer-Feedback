@@ -68,16 +68,7 @@ def predict():
             writer.writerow(fields)
     return render_template('speech_capture.html')
 
-@app.route('/voicepredict', methods=['POST'])
-def voicepredict():
-    modelname = r'feedbackmodel.pkl'
-    countvector1 = r'count_vectorizer.pkl'
-    model = pickle.load(open(modelname, 'rb'))
-    CV = pickle.load(open(countvector1, 'rb'))
-    length = len(CV.get_feature_names())
-    if request.method == 'POST':
-        text = request.form.get('note-textarea1')
-        cleaned_review = contractions.expand_contraction(text)
+
 @app.route('/salesPrediction', methods = ['POST'])
 def salesPrediction():
     store_number = 0
@@ -93,6 +84,7 @@ def salesPrediction():
     if request.method == 'POST':
         loaded_model = pickle.load(open(filename2, 'rb'))
         store_number = request.form.get('storeNumber')
+        product = request.form.get('product')
         price = float(request.form.get('Price'))
         sold = request.form.get('Sold')
         unitCost = float(request.form.get('unitCost'))
@@ -106,7 +98,7 @@ def salesPrediction():
         input_array = input_array.astype(np.float64)
         input_array_for_prediction = np.expand_dims(input_array,axis=0)
         answer = loaded_model.predict(input_array_for_prediction)
-    return render_template('feedbackwordcloud.html', value = answer)
+    return render_template('salesForecasting.html', product = product ,value = round(answer[0], 2))
 
 
 if __name__=='__main__':
