@@ -54,8 +54,12 @@
             <div class="app"> 
            
                 <div class="input-single">
-                  <form action="{{ url_for("predict")}}" method="post">
-                  <center> <textarea id="note-textarea" name="note-textarea" placeholder="Record your feedback here by pressing the start button below." rows="6" style="width: 50%;"></textarea></center> 
+                  <form action="{{ url_for("predict")}}" method="post" id = "main-form">
+                  <center> <textarea id="note-textarea" form = "main-form" name="note-textarea1" placeholder="Record your feedback here by pressing the start button below." rows="6" style="width: 50%;"></textarea></center> 
+                  
+                    <button id="save-note-btn" name = "save-note-btn" type="submit" title="Save Note"  style="background-color: #00607E;">SAVE <i class="fas fa-save"></i></button>
+                  </form>
+                
                 </div> 
                 <center> 
                 
@@ -63,10 +67,7 @@
                 <button id="pause-record-btn" title="Pause Recording"  style="background-color: #00607E;">STOP <i class="fas fa-microphone-slash"></i></button>
                 
                 <br>
-                <button id="save-note-btn" name = "save-note-btn" type="submit" title="Save Note"  style="background-color: #00607E;">SAVE <i class="fas fa-save"></i></button>
-              
-                 
-              </form>
+               
                 </center> <br><br>
                 
                 <center> <p id="recording-instructions"></p></center> 

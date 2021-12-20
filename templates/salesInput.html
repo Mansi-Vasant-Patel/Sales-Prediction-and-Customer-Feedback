@@ -14,17 +14,16 @@
 <body class="container-fluid">
 
     <div class="navbar col-lg-12">
-        <p id="heading1">Customo</p>
-        <p id="Forecasting1"> Sales Forecasting </p>
-        <p id="salesDashboard1"> Sales Dashboard </p>
-        <p id="Wordcloud1"> Feedback Wordcloud </p>
-        <hr class = "underline">
-        <p id="Analysis1"> Feedback Analysis </p>
+        <a href="{{ url_for("home")}}"><p id="heading">Customo</p></a>
+        <a href="{{ url_for("SalesForecasting")}}"><p id="Forecasting"> Sales Forecasting </p></a>
+        <a class="link" href="{{ url_for("SalesDashboard")}}"><p id="Dashboard"> Sales Dashboard </p></a>
+        <a href="{{ url_for("feedbackWordCloud")}}"><p id="Wordcloud"> Feedback Wordcloud </p></a>
+        <a href="{{ url_for("feedbackAnalysis")}}"><p id="Analysis"> Feedback Analysis </p></a>
         
     </div>
 
     <h3>Sales Prediction Form:</h3> <br><br>
-    <form action="#" method="post">
+    <form action="{{ url_for("salesPrediction")}}" method="post" class = "SalesForm">
         <div class="row">
             <div class="form-group col-lg-8 col-md-6"> 
                 <label for = "ProductName">Product Name</label>
@@ -36,36 +35,36 @@
         <div class="row">
             <div class="form-group col-lg-6 col-md-6">
             <label for="storeNumber">Store Number</label>
-            <input type="number" class="form-control" id="strnumber" placeholder="Store Number">
+            <input type="number" name = "storeNumber" class="form-control" id="strnumber" placeholder="Store Number">
             </div>
 
             <div class="form-group col-lg-6 col-md-6">
             <label for="price">Price</label>
-            <input type="number" class="form-control" id="prodprice" placeholder="Price">
+            <input type="number" name = "Price" class="form-control" id="prodprice" placeholder="Price">
             </div>
         </div>
 
         <div class="row">
             <div class="form-group col-lg-6 col-md-6">
             <label for="storeNumber">Sold</label>
-            <input type="number" class="form-control" id="strnumber" aria-describedby="emailHelp" placeholder="Enter total sold items">
+            <input type="number" name = "Sold" class="form-control" id="strnumber" aria-describedby="emailHelp" placeholder="Enter total sold items">
             </div>
 
             <div class="form-group col-lg-6 col-md-6">
             <label for="ProfitOnProduct">Profit </label>
-            <input type="number" class="form-control" id="prodprofit" placeholder="Enter profit on that product">
+            <input type="number" name = "Profit" class="form-control" id="prodprofit" placeholder="Enter profit on that product">
             </div>
         </div>
 
         <div class="row">
             <div class="form-group col-lg-6 col-md-6">
             <label for="storeNumber">Unit Cost</label>
-            <input type="number" class="form-control" id="strnumber" aria-describedby="emailHelp" placeholder="Enter cost of one unit">
+            <input type="number" name = "unitCost" class="form-control" id="strnumber" aria-describedby="emailHelp" placeholder="Enter cost of one unit">
             </div>
 
             <div class="form-group col-lg-6 col-md-6">
             <label for="exampleInputPassword1">Margin</label>
-            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter the product's margin here">
+            <input type="number" name = "Margin" class="form-control" id="exampleInputPassword1" placeholder="Enter the product's margin here">
             </div>
         </div>
 

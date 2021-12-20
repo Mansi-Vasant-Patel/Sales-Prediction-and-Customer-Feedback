@@ -395,3 +395,7 @@ color: rgba(0, 0, 0, 0.67);
     font-size: smaller;
     color: white;
 }
+
+.SalesInput{
+    margin: 10px !important;
+}
