@@ -36,9 +36,9 @@
             <label for="storeNumber">Store Number</label>
             <!--
             <input type="number" name = "storeNumber" class="form-control" id="strnumber" placeholder="Store Number"> -->
-            <div class="dropdown transparentbar">
+            <div class="dropdown">
                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Select from below options
+                 <span id="selected">Select from below options</span><span class="caret"></span></a>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" name = "storeNumber">
                   <a class="dropdown-item" href="#" value = "2">Store No. 2</a>
@@ -101,5 +101,11 @@
     </footer>
 
 </body>
+<script>
+
+    $('.dropdown-menu a').click(function(){
+    $('#selected').text($(this).text());
+  });
+</script>
 
 </html>
