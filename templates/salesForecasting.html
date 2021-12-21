@@ -22,11 +22,25 @@
 
     <div class="row">
     
-        <div class="col-4"></div>
-        <p class="Heading">Sales Forecasting</p>
-        <div class="col-8">
+      
+        
+        <div class="col-lg-12">
+        <div class="row">
+            <p class="Headingforecast">Sales Forecasting</p>
+            <p class = "storenumberhead">Store Number</p>
+            <p class = "storeNumberValue">{{storenum}}</p>
+
+            <p class = "productsoldhead">No. of Product Sold</p>
+            <p class = "productsoldvalue">{{productsold}}</p>
+                
+            <p class = "datehead">Date</p>
+            <p class = date>
+                <script> document.write(new Date().toLocaleDateString()); </script>
+            </p>
+        </div>
         <p class = "productvalue"> Sales predicted for {{product}} </p>
         <p class = "predictedvalue">{{value}}</p>
+
         </div>
 
 
