@@ -12,14 +12,12 @@
 </head>
 <body>
 
-    <div class="navbar">
-        <p id="heading1">Customo</p>
-        <p id="Forecasting1"> Sales Forecasting </p>
-        <p id="salesDashboard1"> Sales Dashboard </p>
-        <p id="Wordcloud1"> Feedback Wordcloud </p>
-        <hr class = "underline">
-        <p id="Analysis1"> Feedback Analysis </p>
-        
+    <div class="navbar col-lg-12">
+        <a href="{{ url_for("home")}}"><p id="heading">Customo</p></a>
+        <a href="{{ url_for("SalesForecasting")}}"><p id="Forecasting"> Sales Forecasting </p></a>
+        <a class="link" href="{{ url_for("SalesDashboard")}}"><p id="Dashboard"> Sales Dashboard </p></a>
+        <a href="{{ url_for("feedbackWordCloud")}}"><p id="Wordcloud"> Feedback Wordcloud </p></a>
+        <a href="{{ url_for("feedbackAnalysis")}}"><p id="Analysis"> Voice Feedback </p></a>
     </div>
 
     <div class="row">

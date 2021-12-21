@@ -28,7 +28,7 @@ def SalesDashboard():
 
 @app.route('/feedbackAnalysis')
 def feedbackAnalysis():
-    return render_template('feedbackanalysis.html')
+    return render_template('speech_capture.html')
 
 
 @app.route('/feedbackWordCloud')
