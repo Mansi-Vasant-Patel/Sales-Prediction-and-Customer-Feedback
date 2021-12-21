@@ -400,15 +400,129 @@ color: rgba(0, 0, 0, 0.67);
     margin: 10px !important;
 }
 
-.productvalue{
+.Headingforecast{
+    position: absolute;
+width: 328.37px;
+height: 68.85px;
+left: 51.41px;
+top: 43px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 72px;
+
+color: #263238;
+}
+
+
+
+.storenumberhead{
     position: relative;
-    left: 25px;
-    top: 187px;
+    left: 325px;
+    top: 160px;
 
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
-    font-size: 48px;
+    font-size: 30px;
+
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+.storeNumberValue{
+    position: relative;
+    left: 225px;
+    top: 217px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 72px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+.productsoldhead{
+    position: absolute;
+    left: 765px;
+    top: 147px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 72px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+.productsoldvalue{
+    position: absolute;
+    left: 865px;
+    top: 217px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 72px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+.datehead{
+    position: absolute;
+    left: 1345px;
+    top: 147px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 72px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+.date{
+    position: absolute;
+    left: 1285px;
+    top: 217px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 72px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+.productvalue{
+    position: relative;
+    left: 675px;
+    top: 267px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
     line-height: 72px;
     /* identical to box height */
 
@@ -418,8 +532,8 @@ color: rgba(0, 0, 0, 0.67);
 
 .predictedvalue{
     position: relative;
-    left: 120px;
-    top: 190px;
+    left: 735px;
+    top: 225px;
 
     font-family: Poppins;
     font-style: normal;

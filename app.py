@@ -98,7 +98,7 @@ def salesPrediction():
         input_array = input_array.astype(np.float64)
         input_array_for_prediction = np.expand_dims(input_array,axis=0)
         answer = loaded_model.predict(input_array_for_prediction)
-    return render_template('salesForecasting.html', product = product ,value = round(answer[0], 2))
+    return render_template('salesForecasting.html',storenum = store_number, productsold = sold ,product = product ,value = round(answer[0], 2))
 
 
 if __name__=='__main__':
