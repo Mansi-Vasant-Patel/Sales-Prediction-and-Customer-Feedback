@@ -566,8 +566,38 @@ color: #263238;
 
 }
 
-.feedback-wordcloud{
+.Heading-wordcloud{
     position: absolute;
-    left: 735px;
+    width: 328.37px;
+    height: 68.85px;
+    left: 51.41px;
+    top: 13px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 72px;
+
+    color: #263238;
+}
+
+.feedback-wordcloud{
+    position: relative;
     top: 225px;
+    max-width: 100%;
+    height: auto;
+    width: 800px;
+    margin-bottom: 50px;
+}
+
+.feedback-count{
+    position: absolute;
+    left: 842px;
+    top: 225px;
+
+    max-width: 100%;
+    height: auto;
+    width: 800px;
+    margin-bottom: 50px;
 }
