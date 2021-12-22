@@ -38,6 +38,39 @@ def feedbackAnalysis():
 
 @app.route('/feedbackWordCloud')
 def feedbackWordCloud():
+    df = pd.read_csv(r"C:\Users\utkar\OneDrive\Desktop\Machine Learning\Customerfeedback\Restaurant_Reviews.tsv", delimiter = "\t")
+    text = " ".join(review for review in df.Review)
+
+    # Deciding on the stop words
+    str_list = text.split()
+    unique_words = set(str_list)
+    wrds = list() #An empty list wrds which will append all the STOPWORDS
+    for words in unique_words :
+            #print('Frequency of ', words , 'is :', str_list.count(words))
+            if(str_list.count(words) > 20):
+                wrds.append(words)
+    #print(wrds)
+    # Creating stopword list:
+    stopwords = set(STOPWORDS)
+    stopwords.update(wrds)
+    # Generate a word cloud image
+    wordcloud = WordCloud(stopwords=stopwords, background_color="white", max_words=40).generate(text)
+
+    # Display the generated image:
+    # the matplotlib way:
+    plt.figure(figsize=(12,8))
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.axis("off")
+    plt.savefig(r'C:\Users\utkar\OneDrive\Desktop\Sales-Prediction-and-Customer-Feedback\Sales-pred\Sales-Prediction-and-Customer-Feedback\static\images\feedback_wordcloud.png')
+    
+
+    plt.figure(figsize=(12,8))
+    review_result = df.groupby("Liked")         # Group the Likes and Dislikes - Liked Column
+    review_result.size().sort_values(ascending=False).plot.bar()
+    plt.xticks(rotation=0)
+    plt.xlabel("Likes - 1, Dislikes - 0")
+    plt.ylabel("Number of Likes / Dislikes")
+    plt.savefig(r'C:\Users\utkar\OneDrive\Desktop\Sales-Prediction-and-Customer-Feedback\Sales-pred\Sales-Prediction-and-Customer-Feedback\static\images\feedback_count.png')
     return render_template('feedbackwordcloud.html')
 
 
@@ -105,42 +138,6 @@ def salesPrediction():
         answer = loaded_model.predict(input_array_for_prediction)
     return render_template('salesForecasting.html',storenum = store_number, productsold = sold ,product = product ,value = round(answer[0], 2))
 
-@app.route('/salesPrediction', methods = ['POST'])
-def wordCloud():
-    df = pd.read_csv(r"file path will coe of the final written file", delimiter = "\t")
-    text = " ".join(review for review in df.Review)
-
-    # Deciding on the stop words
-    str_list = text.split()
-    unique_words = set(str_list)
-    wrds = list() #An empty list wrds which will append all the STOPWORDS
-    for words in unique_words :
-            #print('Frequency of ', words , 'is :', str_list.count(words))
-            if(str_list.count(words) > 20):
-                wrds.append(words)
-    #print(wrds)
-    # Creating stopword list:
-    stopwords = set(STOPWORDS)
-    stopwords.update(wrds)
-    # Generate a word cloud image
-    wordcloud = WordCloud(stopwords=stopwords, background_color="white", max_words=40).generate(text)
-
-    # Display the generated image:
-    # the matplotlib way:
-    plt.figure(figsize=(12,8))
-    plt.imshow(wordcloud, interpolation='bilinear')
-    plt.axis("off")
-    plt.show()
-
-    plt.figure(figsize=(12,8))
-    review_result = df.groupby("Liked")         # Group the Likes and Dislikes - Liked Column
-    review_result.size().sort_values(ascending=False).plot.bar()
-    plt.xticks(rotation=0)
-    plt.xlabel("Likes - 1, Dislikes - 0")
-    plt.ylabel("Number of Likes / Dislikes")
-    plt.show()
-    
-    return render_template('feedbackwordcloud.html')
 
 if __name__=='__main__':
-   app.run(debug=True)
+   app.run(debug=False)

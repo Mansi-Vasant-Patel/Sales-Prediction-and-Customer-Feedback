@@ -565,3 +565,9 @@ color: #263238;
     color: #000000;
 
 }
+
+.feedback-wordcloud{
+    position: absolute;
+    left: 735px;
+    top: 225px;
+}
