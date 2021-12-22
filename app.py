@@ -14,7 +14,6 @@ from logging.handlers import RotatingFileHandler
 
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 from os import path
-from PIL import Image
 import matplotlib.pyplot as plt
 
 app = Flask(__name__)

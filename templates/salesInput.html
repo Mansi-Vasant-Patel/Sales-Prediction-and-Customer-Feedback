@@ -19,83 +19,87 @@
         <a class="link" href="{{ url_for("SalesDashboard")}}"><p id="Dashboard"> Sales Dashboard </p></a>
         <a href="{{ url_for("feedbackWordCloud")}}"><p id="Wordcloud"> Feedback Wordcloud </p></a>
         <a href="{{ url_for("feedbackAnalysis")}}"><p id="Analysis"> Voice Feedback </p></a>
-    </div>
+    </div> 
 
-    <h3>Sales Prediction Form:</h3> <br><br>
-    <form action="{{ url_for("salesPrediction")}}" method="post" class = "SalesForm">
-        <div class="row">
-            <div class="form-group col-lg-8 col-md-6"> 
-                <label for = "ProductName">Product Name</label>
-                <input type="text" name = "product" class="form-control" id="prodName" aria-describedby="emailHelp" placeholder="Product Name">
-            </div>
-        </div>
-        <br><br><br>
-
-        <div class="row">
-            <div class="form-group col-lg-6 col-md-6">
-            <label for="storeNumber">Store Number</label>
-            <!--
-            <input type="number" name = "storeNumber" class="form-control" id="strnumber" placeholder="Store Number"> -->
-            <div class="dropdown">
-                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 <span id="selected">Select from below options</span><span class="caret"></span></a>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" name = "storeNumber">
-                  <a class="dropdown-item" href="#" value = "2">Store No. 2</a>
-                  <a class="dropdown-item" href="#" value = "5">Store No. 5</a>
-                  <a class="dropdown-item" href="#" value = "7">Store No. 7</a>
-                  <a class="dropdown-item" href="#" value = "9">Store No. 9</a>
-                  <a class="dropdown-item" href="#" value = "11">Store No. 11</a>
-                  <a class="dropdown-item" href="#" value = "14">Store No. 14</a>
-                  <a class="dropdown-item" href="#" value = "16">Store No. 16</a>
-                  <a class="dropdown-item" href="#" value = "19">Store No. 19</a>
-                  <a class="dropdown-item" href="#" value = "21">Store No. 21</a>
-                  <a class="dropdown-item" href="#" value = "24">Store No. 24</a>
-
-
-
+    <div style="background-color: #00607E;">
+        <h3 id="salesheading">Sales Prediction Form</h3> <br><br>
+        <form action="{{ url_for("salesPrediction")}}" method="post" class = "SalesForm">
+            <div style="margin-left: 10%;" >
+            <div class="row form-inline">
+                <div class="form-group col-lg-8 col-md-6 form-group"> 
+                    <label for = "ProductName">Product Name:</label>
+                    <input type="text" style="margin-left: 5%; width: 70%;" class="form-control" name = "product" class="form-control" id="prodName" aria-describedby="emailHelp" placeholder="Product Name">
                 </div>
-              </div>
+            </div>
+            <br><br><br>
+
+            <div class="row form-inline">
+                <div class="form-group col-lg-6 col-md-6">
+                <label for="storeNumber">Store Number:</label>
+                <!--
+                <input type="number" name = "storeNumber" class="form-control" id="strnumber" placeholder="Store Number"> -->
+                <div class="dropdown">
+                    <button style="margin-left: 18%; width: 174.5%;" class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span style="color: #707070;" id="selected">Select from below options</span><span class="caret"></span></a>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" name = "storeNumber">
+                    <a class="dropdown-item" href="#" value = "2">Store No. 2</a>
+                    <a class="dropdown-item" href="#" value = "5">Store No. 5</a>
+                    <a class="dropdown-item" href="#" value = "7">Store No. 7</a>
+                    <a class="dropdown-item" href="#" value = "9">Store No. 9</a>
+                    <a class="dropdown-item" href="#" value = "11">Store No. 11</a>
+                    <a class="dropdown-item" href="#" value = "14">Store No. 14</a>
+                    <a class="dropdown-item" href="#" value = "16">Store No. 16</a>
+                    <a class="dropdown-item" href="#" value = "19">Store No. 19</a>
+                    <a class="dropdown-item" href="#" value = "21">Store No. 21</a>
+                    <a class="dropdown-item" href="#" value = "24">Store No. 24</a>
+
+
+
+                    </div>
+                </div>
+                </div>
+
+                <div class="form-group col-lg-6 col-md-6">
+                    <label for="price">Price:</label>
+                    <input type="number" style="margin-left: 6.5%; width: 60%;" name = "Price" class="form-control" id="prodprice" placeholder="Price">
+                </div>
+            </div>
+            <br><br>
+
+            <div class="row form-inline">
+                <div class="form-group col-lg-6 col-md-6">
+                    <label for="storeNumber">Sold:</label>
+                    <input style="margin-left: 19%; width: 60%;" type="number" name = "Sold" class="form-control" id="strnumber" aria-describedby="emailHelp" placeholder="Enter total sold items">
+                </div>
+
+                <div class="form-group col-lg-6 col-md-6">
+                    <label for="ProfitOnProduct">Profit:</label>
+                    <input style="margin-left: 6%; width: 60%;" type="number" name = "Profit" class="form-control" id="prodprofit" placeholder="Enter profit on that product">
+                </div>
+            </div>
+            <br><br>
+
+            <div class="row form-inline">
+                <div class="form-group col-lg-6 col-md-6">
+                    <label for="storeNumber">Unit Cost:</label>
+                    <input style="margin-left: 13%; width: 60%;" type="number" name = "unitCost" class="form-control" id="strnumber" aria-describedby="emailHelp" placeholder="Enter cost of one unit">
+                </div>
+
+                <div class="form-group col-lg-6 col-md-6">
+                    <label for="exampleInputPassword1">Margin:</label>
+                    <input style="margin-left: 4%; width: 60%;" type="number" name = "Margin" class="form-control" id="exampleInputPassword1" placeholder="Enter the product's margin here">
+                </div>
+            </div>
             </div>
 
-            <div class="form-group col-lg-6 col-md-6">
-            <label for="price">Price</label>
-            <input type="number" name = "Price" class="form-control" id="prodprice" placeholder="Price">
-            </div>
-        </div>
+    <br><br><br>
+            <center><button style="background-color: #FFFFFF; color: #00607E; width: 110px; font-weight: bold;" type="submit" class="btn btn-primary" style="background-color: #00607E;" name="salespredbtn" id="sales-btn">Submit</button></center>
+    <br>
 
-        <div class="row">
-            <div class="form-group col-lg-6 col-md-6">
-            <label for="storeNumber">Sold</label>
-            <input type="number" name = "Sold" class="form-control" id="strnumber" aria-describedby="emailHelp" placeholder="Enter total sold items">
-            </div>
+        </form>
 
-            <div class="form-group col-lg-6 col-md-6">
-            <label for="ProfitOnProduct">Profit </label>
-            <input type="number" name = "Profit" class="form-control" id="prodprofit" placeholder="Enter profit on that product">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="form-group col-lg-6 col-md-6">
-            <label for="storeNumber">Unit Cost</label>
-            <input type="number" name = "unitCost" class="form-control" id="strnumber" aria-describedby="emailHelp" placeholder="Enter cost of one unit">
-            </div>
-
-            <div class="form-group col-lg-6 col-md-6">
-            <label for="exampleInputPassword1">Margin</label>
-            <input type="number" name = "Margin" class="form-control" id="exampleInputPassword1" placeholder="Enter the product's margin here">
-            </div>
-        </div>
-
-
-<br><br><br>
-        <center><button type="submit" class="btn btn-primary" style="background-color: #00607E;" name="salespredbtn" id="sales-btn">Submit</button></center>
-<br>
-
-      </form>
-
-
+</div>
     <footer>
         <div class="footer"> <center>&copy; 2021 Customo Technologies. All Rights Reserved.</center></div>
     </footer>
