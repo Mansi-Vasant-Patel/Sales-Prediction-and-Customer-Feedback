@@ -121,7 +121,7 @@ def salesPrediction():
     loaded_model = pickle.load(open(filename2, 'rb'))
     if request.method == 'POST':
         loaded_model = pickle.load(open(filename2, 'rb'))
-        store_number = request.form.get('storeNumber')
+        store_number = request.form.get('storenum')#request.form.get('storeNumber')
         product = request.form.get('product')
         price = float(request.form.get('Price'))
         sold = request.form.get('Sold')
@@ -137,6 +137,7 @@ def salesPrediction():
         input_array_for_prediction = np.expand_dims(input_array,axis=0)
         answer = loaded_model.predict(input_array_for_prediction)
     return render_template('salesForecasting.html',storenum = store_number, productsold = sold ,product = product ,value = round(answer[0], 2))
+    
 
 
 if __name__=='__main__':
