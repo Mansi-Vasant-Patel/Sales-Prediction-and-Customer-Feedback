@@ -12,7 +12,7 @@ import csv
 import logging
 from logging.handlers import RotatingFileHandler
 
-from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
+#from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 from os import path
 import matplotlib.pyplot as plt
 
