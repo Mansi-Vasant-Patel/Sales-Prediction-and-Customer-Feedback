@@ -601,3 +601,28 @@ color: #263238;
     width: 800px;
     margin-bottom: 50px;
 }
+
+.Heading-Dashboard{
+    position: absolute;
+    width: 328.37px;
+    height: 68.85px;
+    left: 51.41px;
+    top: 13px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 72px;
+
+    color: #263238;
+}
+
+.tableauPlaceholder{
+    position: relative;
+    top: 125px;
+    max-width: 100%;
+    height: auto;
+    width: 1400px;
+    margin-bottom: 50px;   
+}
